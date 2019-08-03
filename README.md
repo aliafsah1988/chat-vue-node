@@ -9,7 +9,7 @@ A Real Time Chat Application built using Vue.js, Node.js, Express, Mongoose, Soc
 + [Contribute](#contribute)
 + [License](#license)
 
-## Features
+## Server Features
 + Uses Express as the application Framework.
 + Manages Sessions using [express-session](https://github.com/expressjs/session) package.
 + Authenticates via username and password using [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken).
@@ -20,32 +20,38 @@ A Real Time Chat Application built using Vue.js, Node.js, Express, Mongoose, Soc
 + Uses [Redis](https://github.com/antirez/redis) as an Adapter for [Socket.io](https://github.com/socketio/socket.io).
 + Logging Errors and Exceptions using [Winston](https://github.com/winstonjs/winston).
 
-## Installation<a name="installation"></a>
+## Web Client Features
++ Uses Vue.js as the application Framework [vue](https://github.com/vuejs/vue).
++ Hit Server's Endpints with [axios](https://github.com/axios/axios) package.
++ Connects via statefull connection with [socket.io-client](https://github.com/socketio/socket.io-client).
++ Manages routes with vue-router [vue-router](https://github.com/vuejs/vue-router).
++ Uses js-cookie for managing cookies [vue-router](https://github.com/js-cookie/js-cookie).
++ Uses Vuex for state management [vuex](https://github.com/vuejs/vuex).
+
+
+## Installation
 ### Running Locally
 Make sure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
 
-1. Clone or Download the repository
+- Clone or Download the repository
+	clone https://github.com/aliafsah1988/chat-vue-node.git
 
-	```
-	$ git clone https://github.com/aliafsah1988/chat-vue-node.git
-	$ cd chat-vue-node
-	```
+- For running server
+1. got to chat-vue-node/server
 2. Install Dependencies
-
-	```
 	$ npm install
-	```
-2. Edit configuration file in _app/config/config.json_ with your credentials(see [Setup Configurations](#configurations)).
-3. Download and Install [Redis](http://redis.io/download).
+3. Edit configuration file in _app/config/config.json_ with your credentials(see [Setup Configurations](#configurations)).
+4. Download and Install [Redis](http://redis.io/download).
    If your development enviroment is Windows use this [Redis](https://github.com/rgl/redis/downloads).
-4. Running Redis Server(as Admin)
-
-	```
+5. Running Redis Server(as Admin)
 	$ redis-server
-	``` 
-5. Start the application
-
-	```
+6. Start the application
 	$ npm start
-	```
-Your app should now be running on [localhost:3000](http://localhost:3000/).
+   Your app should now be running on [localhost:3000](http://localhost:3000/).
+
+- For running client vue.js app
+1. got to chat-vue-node/webClient
+2. Install Dependencies
+	$ npm install
+6. Start the application
+	$ npm run serve
