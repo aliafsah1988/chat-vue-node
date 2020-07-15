@@ -2,7 +2,7 @@
     <div class="login-page">
       <div class="form">
         <div style="background-color: gainsboro;margin-bottom: 10px;">
-          Nastaran Goshtasbi's Chat App
+          Some Chat App
         </div>
 
         <div style="margin-top: 18px;">

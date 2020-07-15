@@ -4,18 +4,19 @@
   "description": "A Real Time Chat Application built using Node.js, Express, Mongoose, Socket.io, Passport, & Redis.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "build": "babel src -d dist",
+    "start": "nodemon --exec babel-node src/server.js"
   },
   "repository": {
-    "url": "git+https://github.com/NastaranGoshtasbi/ChatApp.git",
+    "url": "git+https://https://github.com/aliafsah1988/chat-vue-node.git",
     "type": "git"
   },
-  "author": "Nastaran Goshtasbi",
+  "author": "Ali Afsahnoudeh",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NastaranGoshtasbi/ChatApp/issues"
+    "url": "https://https://github.com/aliafsah1988/chat-vue-node/issues"
   },
-  "homepage": "https://github.com/NastaranGoshtasbi/ChatApp",
+  "homepage": "https://https://github.com/aliafsah1988/chat-vue-node",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "bcryptjs": "^2.4.3",
@@ -36,5 +37,21 @@
     "socket.io": "^2.0.3",
     "socket.io-redis": "^5.1.0",
     "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/node": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^1.18.11"
   }
 }

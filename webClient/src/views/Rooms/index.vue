@@ -1,32 +1,32 @@
 <template>
-    <div class="container clearfix" style="width: 500px;">
-      <div class="controls" style="border: none; width: 100%;">
-          <a @click="logout()" class="logout-btn" style="width: auto; padding: 13px; font-size: 12px;">Logout</a>
-      </div>
+  <div class="container clearfix" style="width: 500px;">
+    <div class="controls" style="border: none; width: 100%;">
+        <a @click="logout()" class="logout-btn" style="width: auto; padding: 13px; font-size: 12px;">Logout</a>
+    </div>
 
-      <div class="room" style="width: 100%;">
-        <div class="room-header clearfix">
-          <div class="room-about">
-            <div class="room-title">Rooms</div>
-            <div class="room-num-rooms">{{ rooms.length }} Room(s)</div>
-          </div>
-          <i class="fa fa-th-list"></i>
-        </div> <!-- end room-header -->
+    <div class="room" style="width: 100%;">
+      <div class="room-header clearfix">
+        <div class="room-about">
+          <div class="room-title">Rooms</div>
+          <div class="room-num-rooms">{{ rooms.length }} Room(s)</div>
+        </div>
+        <i class="fa fa-th-list"></i>
+      </div> <!-- end room-header -->
 
-        <div class="room-create clearfix" style="border-bottom: 2px solid white;">
-          <input type="text" name="title" autofocus placeholder ="Type a new room" v-model="title">
-          <button @click="createRoom()">Create</button>
-        </div> <!-- end room-create -->
+      <div class="room-create clearfix" style="border-bottom: 2px solid white;">
+        <input type="text" name="title" autofocus placeholder ="Type a new room" v-model="title">
+        <button @click="createRoom()">Create</button>
+      </div> <!-- end room-create -->
 
-        <div class="room-list" v-if="rooms.length > 0">
-          <ul v-for="room in rooms" :key="room._id">
-            <li class="room-item" @click="goToChatRoom(room)">{{room.title}}</li>
-          </ul>
-        </div> <!-- end room-list -->
-        <p v-else class="message" style="text-align: center; padding: 0; margin: 0;">Create your first room!</p>
-      </div> <!-- end room -->
-    </div> <!-- end container -->
-    </template>
+      <div class="room-list" v-if="rooms.length > 0">
+        <ul v-for="room in rooms" :key="room._id">
+          <li class="room-item" @click="goToChatRoom(room)">{{room.title}}</li>
+        </ul>
+      </div> <!-- end room-list -->
+      <p v-else class="message" style="text-align: center; padding: 0; margin: 0;">Create your first room!</p>
+    </div> <!-- end room -->
+  </div> <!-- end container -->
+</template>
 
 <script>
 import io from 'socket.io-client'

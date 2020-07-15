@@ -1,0 +1,7 @@
+{
+  "name": "chatapp",
+  "description": "A Real Time Chat Application built using Node.js, Express, Mongoose, Socket.io, Passport, & Redis.",
+  "repository": "https://https://github.com/aliafsah1988/chat-vue-node",
+  "logo": "https://raw.githubusercontent.com/OmarElGabry/chat.io/master/public/img/chat.io.PNG",
+  "keywords": ["real-time", "chat", "nodejs", "express", "mongoose", "socketio", "passport", "redis"]
+}
